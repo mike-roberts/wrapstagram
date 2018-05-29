@@ -1,12 +1,16 @@
 {
-  "name": "electron-quick-start",
+  "name": "wrapstagram",
+  "productName": "Wrapstagram",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A desktop wrapper of Instagram to unlock all features.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/mac/instagram-2016.png.icns --prune=true --out=release-builds",
+    "build:win": "electron-packager . wrapstagram --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/win/instagram-2016.png.ico --prune=true --out=release-builds --version-string.CompanyName=MR --version-string.FileDescription=MR --version-string.ProductName=\"Wrapstagram\"",
+    "build:linux": "electron-packager . wrapstagram --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/png/1024x1024.png --prune=true --out=release-builds"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/mike-roberts/wrapstagram",
   "keywords": [
     "Electron",
     "quick",
@@ -14,9 +18,13 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "Mike Roberts",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^2.0.0",
+    "electron-packager": "^12.1.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
   }
 }

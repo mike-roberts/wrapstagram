@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Wrapstagram</title>
+</head>
+
+<body style="height: 100vh; width: 100vw; background: url('./assets/png/512x512.png');background-position: center center; background-repeat: no-repeat;padding: 0;margin: 0;">
+  <webview id="foo" src="https://www.instagram.com" useragent="Mozilla/5.0 (iPad; U; CPU OS 11_3_2 like Mac OS X; en-PH) AppleWebKit/537.26.33 (KHTML, like Gecko) Version/11.0.1 Mobile/8F48a Safari/537.26.33"
+    style="width: 100vw; height: 100vh;"></webview>
+</body>
+
 </html>
